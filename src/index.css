@@ -1,13 +1,63 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --questrial: 'Questrial', sans-serif;
+    --baloo: 'Baloo Chettan 2', cursive;
+    --poppins:'Poppins', sans-serif;;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Chettan+2:wght@800&family=Questrial&display=swap');
+
+.logo_title {
+    font-family: var(--baloo);
+}
+.questrial_fnt {
+    font-family: var(--questrial);
+    letter-spacing: 3px;
+    color: white;
+}
+.poppins{
+    font-family: var(--poppins);
+    letter-spacing: 2px;
+}
+/* MAIN BG */
+html{
+    height: 100%;
+}
+/* width */
+::-webkit-scrollbar {
+    display: none;
+} 
+body {
+    background-color:#09203F;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ROWS */
+.scroll-smooth {
+    scroll-snap-type: x mandatory;
+}
+.image-scroll-align {
+    scroll-snap-align: center;
+}
+/* SCROLLBAR */
+.no-scrollbar::-webkit-scrollbar {
+  visibility: hidden;
+}
+/* MENU */
+.showNav {
+    transition: all 300ms ease-in-out;
+    left: 0px;
+    opacity: 1;
+   
+}
+.hideNav {
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+    left: -500px;
 }
