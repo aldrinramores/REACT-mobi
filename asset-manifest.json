@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/REACT-mobi/static/css/main.be4fb0c6.css",
+    "main.js": "/REACT-mobi/static/js/main.9ec0b520.js",
+    "index.html": "/REACT-mobi/index.html",
+    "main.be4fb0c6.css.map": "/REACT-mobi/static/css/main.be4fb0c6.css.map",
+    "main.9ec0b520.js.map": "/REACT-mobi/static/js/main.9ec0b520.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be4fb0c6.css",
+    "static/js/main.9ec0b520.js"
+  ]
+}
