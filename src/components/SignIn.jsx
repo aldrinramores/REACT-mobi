@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import {FcGoogle} from 'react-icons/fc'
 import {FaFacebook} from 'react-icons/fa'
 import {useAuthState} from 'react-firebase-hooks/auth'
-import { GoogleAuthProvider, signInWithPopup, FacebookAuthProvider } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup, FacebookAuthProvider, updateProfile } from 'firebase/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import { auth } from '../firebase';
 
@@ -18,7 +18,7 @@ const SignIn = () => {
   const GoogleLogin = async () => {
     try {
       const result = await signInWithPopup(auth,googleProvider)
-    
+        
 
       if(user){
         navigate(`/`);  
@@ -37,13 +37,15 @@ const SignIn = () => {
   const FacebookLogin = async () => {
     try {
       const result = await signInWithPopup(auth,facebookProvider)
-     
+      // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+        const credential = await FacebookAuthProvider.credentialFromResult(result);
+        const accessToken = credential.accessToken;
 
       if(user){
         navigate(`/`);  
       }
 
-      console.log(result.user)
+      console.log(result)
     } catch (error) {
       
     }
