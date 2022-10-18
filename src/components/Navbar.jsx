@@ -89,7 +89,7 @@ const Navbar = () => {
       
 
         <li className="flex items-center gap-2 py-5 my-2 md:my-10 px-10 hover:bg-slate-700">
-        {user ? (<img className='rounded-full w-[20%]' src= {`${user.photoURL}`}/>) : (<RiUserLine/>)}
+        {user ? (<RiUserLine/>) : (<RiUserLine/>) }
         <p>{user ? `${user.displayName}` : (<button onClick={goSignInPage}> Account</ button>)}</p>
            
          
