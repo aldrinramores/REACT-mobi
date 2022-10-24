@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Movie API
 
 List of Movie Info pulled from https://www.themoviedb.org/
 
